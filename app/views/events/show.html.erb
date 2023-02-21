@@ -1,0 +1,8 @@
+
+<div class="container mt-5 d-flex justify-content-center flex-column align-items-center ">
+  <h1><%=@event.title%></h1>
+  <h2><%=@event.description%></h2>
+   <h3>L'evenement commennce <%= @event.start_date%> et dure <%=@event.duration%></h3>
+    <a href="<%= root_path%>" class="btn btn-sm btn-primary my-2">Revenir aux events</a>
+    <a href="<%=edit_event_path%>"class="btn btn-sm">Modifier</a>
+ 

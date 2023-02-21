@@ -1,0 +1,18 @@
+<div class="container my-5 py-5 d-flex flex-column justify-content-center align-items-center">
+<h1>Editer votre Event</h1>
+<%= form_for @event do |f| %>
+  <div class="form-group py-2">
+    <label>TNom de l'evenement</label>
+    <%=f.text_field :title%>
+  </div>
+  <div class="form-group py-2">
+    <label>Desciption de l'evenement<label>
+    <%=f.text_field :description%>
+  </div>
+
+  <div class="form-group py-2">
+    <button type="submit" class="btn btn-sm btn-primary">Modifier</button>
+    <a href="<%= root_path%>" class="btn btn-sm btn-outline-primary">Revenir aux event</a>
+  </div>
+<%end%>
+</div>

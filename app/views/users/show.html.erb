@@ -1,0 +1,14 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+
+<p> <%= @user.description %> </p>
+
+<p><%= @user.email %> </p>
+
+<p> <%= link_to 'Edit account', edit_user_registration_path %> </p>
+
+<p>Events crée par <%= @user.first_name %> </p>
+<% @admin_event.each do |event| %>
+<%if event.user_id == current_user.id%>
+<p><%= event.title%></p>
+<%end%>
+<%end%>
